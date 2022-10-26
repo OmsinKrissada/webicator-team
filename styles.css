@@ -1,0 +1,10 @@
+* {
+	margin: 0;
+}
+
+#cover {
+	min-height: 100vh;
+
+	/* background-color: black; */
+	background: linear-gradient(to bottom right, #38bdf8, #14b8a6);
+}
