@@ -8,7 +8,6 @@
 section {
 	height: 100vh;
 	display: flex;
-	color: white;
 	scroll-snap-align: start;
 }
 
@@ -24,10 +23,11 @@ section {
 	font-size: 300%;
 	justify-content: center;
 	align-items: center;
+	color: white
 }
 .two {
 	background-color: aquamarine;
-	align-items: left;
+	color: black;
 }
 .three {
 	background-color: blanchedalmond;
@@ -35,9 +35,18 @@ section {
 .four {
 	background-color: blueviolet;
 }
+.five {
+	background-color: brown;
+}
+
+.GameName {
+	float: right;
+	margin-left: 500px;
+	margin-top: 100px;
+}
 
 .Bedwarpic {
 	float: right;
 	margin-left: 60px;
-	margin-top: 90px;
+	margin-top: 110px;
 }
