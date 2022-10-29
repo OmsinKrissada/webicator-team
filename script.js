@@ -4,7 +4,7 @@ fetch('https://gamertocoder.garena.co.th/api/minigames')
 
 		const str = data.map(g => {
 
-			return `<li><p>${g.name}</p><img src="${g.icon}" width="100"></li>`;
+			return `<li><img src="${g.icon}" width="100"></li>`;
 
 		});
 		console.log(str);
