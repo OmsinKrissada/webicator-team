@@ -123,7 +123,7 @@ section {
 
 .Bed_Front_GameName {
 	float: right;
-	margin-left: 550px;
+	margin-left: 200px;
 	margin-top: 100px;
 }
 
@@ -144,4 +144,10 @@ section {
 	float: right;
 	margin-left: 600px;
 	margin-top: 110px;
+}
+
+.text {
+	float: right;
+	margin-left: 10px;
+	margin-top: 150px;
 }
