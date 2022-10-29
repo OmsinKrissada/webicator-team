@@ -43,18 +43,28 @@ section {
 	background-color: brown;
 }
 
+<<<<<<< HEAD
 .game-name {
+=======
+.Bed_Front_GameName {
+>>>>>>> f840e5fc0860615b579393ebf1de869a1544b266
 	float: right;
-	margin-left: 500px;
+	margin-left: 550px;
 	margin-top: 100px;
 }
 
-.Bedwarpic {
+.Free_Party_GameName {
+	float: right;
+	margin-left: 300px;
+	margin-top: 100px;
+}
+.Bed_Front_logopic {
 	float: right;
 	margin-left: 60px;
 	margin-top: 110px;
 }
 
+<<<<<<< HEAD
 /* Omsin */
 .panel {
 	position: absolute;
@@ -64,3 +74,10 @@ section {
 }
 
 /* .panel ul {} */
+=======
+.Free_Party_logopic {
+	float: right;
+	margin-left: 600px;
+	margin-top: 110px;
+}
+>>>>>>> f840e5fc0860615b579393ebf1de869a1544b266
