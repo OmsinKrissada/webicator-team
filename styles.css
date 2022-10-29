@@ -137,6 +137,7 @@ section {
 	float: right;
 	margin-left: 60px;
 	margin-top: 110px;
+	border-radius: 20px;
 }
 
 /* .panel ul {} */
@@ -144,6 +145,7 @@ section {
 	float: right;
 	margin-right: 60px;
 	margin-top: 110px;
+	border-radius: 20px;
 }
 
 .right_text {
