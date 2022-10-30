@@ -12,10 +12,8 @@ async function onFetched() {
 	// construct panel list
 
 	const str = games.map(g => {
-		return `<li onclick="jumpTo(${g.no})"><img src="${g.icon}" width="100"></li>`;
+		return `<li onclick="jumpTo(${g.no})"><p>${g.name}</p><img src="${g.icon}" width="100"></li>`;
 	});
-	// console.log(str);
-
 	const ulELement = document.querySelector('#panel>ul');
 	ulELement.insertAdjacentHTML('beforeend', str.join(''));
 
@@ -25,8 +23,18 @@ async function onFetched() {
 	for (const game of games) {
 		const element = document.createElement('h2');
 		element.innerText = game.name.toUpperCase();
-		element.classList.add('game', `game-${game.no}`, 'left');
+		element.classList.add(`game-${game.no}`, 'up');
 		titleHolder.appendChild(element);
+	}
+
+	// construct description
+
+	const descriptionHolder = document.getElementById('description-holder');
+	for (const game of games) {
+		const element = document.createElement('p');
+		element.innerText = game.description.toUpperCase();
+		element.classList.add(`game-${game.no}`, 'right');
+		descriptionHolder.appendChild(element);
 	}
 }
 
