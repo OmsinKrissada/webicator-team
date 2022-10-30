@@ -268,6 +268,54 @@ section {
 	background-size: cover;
 }
 
+.six {
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bulletsfly/bulletsfly_01.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.seven {
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/rodentevil/rodentevil_03.png);
+	background-position: center;
+}
+
+.eight {
+	background-image: url(https://pbs.twimg.com/media/EigSnSqU0AAY--s.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.nine {
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/buildandshoot/buildandshoot_01.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.ten {
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/skyblock/skyblock_01.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.eleven {
+	background-image: url(https://i.ytimg.com/vi/KjgtSJ3msRs/maxresdefault.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.twelve {
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/district13/district13_04.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.thirteen {
+	background-image: url(https://i.ytimg.com/vi/lpGBmYdfxXM/maxresdefault.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+
 .right_GameName {
 	margin-top: 100px;
 	text-align: center;
