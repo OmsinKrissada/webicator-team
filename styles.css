@@ -105,32 +105,44 @@ section {
 }
 
 .two {
-	background-color: aquamarine;
-	color: black;
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bedwars/bedwars_04.png);
+	background-position: center;
+	background-size: cover;
 }
 
 .three {
-	background-color: blanchedalmond;
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/freecity/freecity_01.png);
+	background-position: center;
+	background-size: cover;
 }
 
 .four {
-	background-color: lightblue
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/frontline/frontline_01.jpg);
+	background-size: cover;
 }
 
 .five {
-	background-color: pink
+	background-image: url(https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/partystreet/partystreet_07.png);
+	background-position: center;
+	background-size: cover;
 }
 
 .right_GameName {
 	margin-top: 100px;
 	text-align: center;
 	font-size: xx-large;
+	background-color: lightcoral;
+	padding: 20px;
+	border-radius: 20px;
 }
 
 .left_GameName {
 	margin-top: 100px;
 	text-align: center;
 	font-size: xx-large;
+	background-color: lightgreen;
+	padding: 20px;
+	border-radius: 20px;
 }
 
 .left_logopic {
@@ -155,13 +167,21 @@ section {
 	margin-right: 50px;
 	text-align: left;
 	font-size: x-large;
+	line-height: 35px;
+	background-color: lightblue;
+	padding: 20px;
+	border-radius: 20px;
 }
 
 .left_text {
 	float: left;
 	margin-right: 50px;
-	margin-left: 100px;
+	margin-left: 50px;
 	margin-top: 30px;
 	text-align: left;
 	font-size: x-large;
+	line-height: 35px;
+	background-color: lightsalmon;
+	padding: 20px;
+	border-radius: 20px;
 }
