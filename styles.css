@@ -234,8 +234,10 @@ section {
 	text-align: center;
 	font-size: xx-large;
 	background-color: lightcoral;
-	padding: 20px;
 	border-radius: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding: 10px;
 }
 
 .left_GameName {
@@ -243,8 +245,10 @@ section {
 	text-align: center;
 	font-size: xx-large;
 	background-color: lightgreen;
-	padding: 20px;
+	padding: 10px;
 	border-radius: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 .left_logopic {
