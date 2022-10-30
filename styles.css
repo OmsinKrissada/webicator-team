@@ -124,9 +124,47 @@ section {
 	justify-content: space-evenly;
 	align-items: center;
 
-	/* background-image: url('https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bmg-banner/02.png'); */
+	/* background-image: url('https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bmg-banner/01.png');
+	background-size: cover; */
+	/* background-position: center; */
+	overflow: hidden;
+	/*  hide scrollbars */
+
+	/* opacity: 1.0;
+	-webkit-transition: background 1.5s linear;
+	-moz-transition: background 1.5s linear;
+	-o-transition: background 1.5s linear;
+	-ms-transition: background 1.5s linear;
+	transition: background 1.5s linear; */
+}
+
+.wallpaper {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+
 	background-size: cover;
 	background-position: center;
+
+
+	/* background-color: black; */
+	transition: opacity 1s;
+	/* transition-delay: 1s; */
+}
+
+.wallpaper.front {
+	/* opacity: 1; */
+	/* background-image: url('https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bmg-banner/01.png'); */
+	z-index: -1;
+}
+
+.wallpaper.back {
+	/* background-image: url('https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bmg-banner/02.png'); */
+	z-index: -2;
+}
+
+.hidden {
+	opacity: 0;
 }
 
 /* .container {
@@ -159,6 +197,7 @@ section {
 	max-width: 50vmin;
 
 	font-size: large;
+	color: white;
 }
 
 

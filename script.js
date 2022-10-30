@@ -17,28 +17,54 @@ async function onFetched() {
 	const ulELement = document.querySelector('#panel>ul');
 	ulELement.insertAdjacentHTML('beforeend', str.join(''));
 
-	// construct title
 
 	const titleHolder = document.getElementById('title-holder');
-	for (const game of games) {
-		const element = document.createElement('h2');
-		element.innerText = game.name.toUpperCase();
-		element.classList.add(`game-${game.no}`, 'up');
-		titleHolder.appendChild(element);
-	}
-
-	// construct description
-
 	const descriptionHolder = document.getElementById('description-holder');
 	for (const game of games) {
-		const element = document.createElement('p');
-		element.innerText = game.description.toUpperCase();
-		element.classList.add(`game-${game.no}`, 'right');
-		descriptionHolder.appendChild(element);
+
+		// construct title
+
+		const titleElement = document.createElement('h2');
+		titleElement.innerText = game.name.toUpperCase();
+		titleElement.classList.add(`game-${game.no}`, 'up');
+		titleHolder.appendChild(titleElement);
+
+		// construct description
+
+		const descElement = document.createElement('p');
+		descElement.innerText = game.description.toUpperCase();
+		descElement.classList.add(`game-${game.no}`, 'right');
+		descriptionHolder.appendChild(descElement);
 	}
 }
 
 let currentGameId = null;
+
+let previousTimeout;
+
+/**
+ * 
+ * @param {string} url image url
+ */
+function fadeBackground(url) {
+
+	const overlayStr = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))';
+
+	clearTimeout(previousTimeout); // prevent spam click
+
+	console.log(url);
+	const front = document.querySelector('.wallpaper.front');
+	const back = document.querySelector('.wallpaper.back');
+
+	console.log('fading');
+	back.setAttribute('style', `background-image: ${overlayStr}, url(${url})`);
+	front.classList.add('hidden');
+	previousTimeout = setTimeout(() => {
+		console.log('timeout triggered');
+		front.setAttribute('style', `background-image: ${overlayStr}, url(${url})`);
+		front.classList.remove('hidden');
+	}, 1000);
+}
 
 /**
  * 
@@ -55,6 +81,8 @@ function setCoverDisplay(id) {
 	}
 
 	currentGameId = id;
+
+	fadeBackground(games.filter(g => g.no == id)[0].images[0]);
 }
 
 
