@@ -1,8 +1,19 @@
+/*
+	Use kebab case (something-like-this) for class names and ids in CSS
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	/* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+	font-family: 'Prompt', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	/* overflow-x: hidden; */
 }
 
 section {
@@ -19,7 +30,7 @@ section {
 }
 
 #cover {
-	background-image: url('https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bmg-banner/01.png');
+	background-image: url('https://cdngarenanow-a.akamaihd.net/webth/cdn/garena/gamertocoder/bmg-banner/02.png');
 	background-size: cover;
 	background-position: center;
 }
@@ -29,12 +40,12 @@ section {
 
 	top: 1rem;
 	right: 1rem;
-	/* right: -17px; */
+	right: -17px;
 
 	max-height: 50vh;
 	padding: 1.6rem;
 
-	background-color: #ffffff55;
+	background-color: #1e293b88;
 	backdrop-filter: blur(50px);
 
 	border-radius: 10px;
@@ -77,6 +88,7 @@ section {
 
 #panel li {
 	margin-bottom: 1.6rem;
+	cursor: pointer;
 }
 
 #panel li:last-child {
@@ -94,6 +106,44 @@ section {
 	overflow-y: scroll;
 	height: 100vh;
 } */
+
+/* 
+	Animation/Transition Helper (Omsin)
+	without "active" means "hidden"
+*/
+
+.left {
+	/* display: none; */
+	transform: translateX(-100vw);
+	transition: all 500ms ease-out;
+}
+
+.left.active {
+	/* display: inline; */
+	transform: translateX(0);
+}
+
+.right {
+	display: none;
+	transform: translateX(100vw);
+	transition: all 500ms ease-out;
+}
+
+.right.active {
+	display: inline;
+	transform: translateX(0);
+}
+
+#title-holder h2 {
+	position: absolute;
+
+	padding: 1rem 2rem;
+	background-color: black;
+
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
+	color: white;
+}
+
 
 .one {
 	background-color: black;
