@@ -33,7 +33,7 @@ async function onFetched() {
 		// construct description
 
 		const descElement = document.createElement('p');
-		descElement.innerText = game.description.toUpperCase();
+		descElement.innerHTML += `<span>${game.genre.join(' / ')}</span>\n${game.description}`;
 		descElement.classList.add(`game-${game.no}`, 'right');
 		descriptionHolder.appendChild(descElement);
 
@@ -74,6 +74,14 @@ function fadeBackground(url) {
 	}, 1000);
 }
 
+
+const imageBias = {
+	1: 4,
+	4: 2,
+	7: 'https://wallpaperaccess.com/full/3409371.jpg', // ทางทีมงานไม่ได้มีภาพให้ครับ
+	10: 'https://i.ytimg.com/vi/KjgtSJ3msRs/maxresdefault.jpg',
+};
+
 /**
  * 
  * @param {number} id game id 
@@ -90,7 +98,13 @@ function setCoverDisplay(id) {
 
 	currentGameId = id;
 
-	fadeBackground(games.filter(g => g.no == id)[0].images[0]);
+	const selectedGame = games.filter(g => g.no == id)[0];
+	if (imageBias[selectedGame.no] && isNaN(imageBias[selectedGame.no])) {
+		fadeBackground(imageBias[selectedGame.no]);
+	} else {
+		const index = imageBias[selectedGame.no] ? imageBias[selectedGame.no] - 1 : 0;
+		fadeBackground(selectedGame.images[index]);
+	}
 }
 
 

@@ -163,13 +163,14 @@ section {
 #title-holder h2 {
 	position: absolute;
 
-	padding: 1rem 2rem;
-	background-color: black;
+	width: 50ch;
 
-	font-size: xx-large;
+	padding: 1rem 2rem;
+	/* background-color: black; */
+
+	font-size: 3rem;
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
 	color: white;
-	border-radius: 30px;
 }
 
 #description-holder {
@@ -192,6 +193,15 @@ section {
 
 	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
 
+}
+
+#description-holder p span {
+	display: block;
+
+	margin-bottom: 1rem;
+
+	font-weight: bold;
+	color: #94a3b8;
 }
 
 #icon-holder {
