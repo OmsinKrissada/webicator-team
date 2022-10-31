@@ -102,3 +102,5 @@ function jumpTo(id) {
 	setCoverDisplay(id);
 	// alert(id);
 }
+
+
