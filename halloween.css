@@ -11,10 +11,10 @@ body {
 
 .container {
 	position: absolute;
-	top: 0;
+	top: -5%;
 	left: 50%;
 	margin-left: -20px;
-	animation: inicio 3s ease-in-out forwards;
+	animation: inicio 5s ease-in-out forwards;
 }
 
 .container::after {
@@ -121,7 +121,11 @@ body {
 }
 
 @keyframes inicio {
+	30% {
+		top: 30%;
+	}
+
 	100% {
-		top: 50%;
+		top: -10%;
 	}
 }
