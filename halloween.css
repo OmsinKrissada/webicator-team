@@ -2,19 +2,13 @@
 
 /* By Toffy */
 
-
-html,
-body {
-	height: 100%;
-	overflow: hidden;
-}
-
 .container {
+	z-index: 2;
 	position: absolute;
 	top: -5%;
 	left: 50%;
 	margin-left: -20px;
-	animation: inicio 5s ease-in-out forwards;
+	animation: dropDown 5s ease-in-out forwards;
 }
 
 .container::after {
@@ -50,77 +44,77 @@ body {
 	transform: rotateY(180deg);
 }
 
-.uno,
-.dos,
-.tres,
-.cuatro {
+.leg-one,
+.leg-two,
+.leg-three,
+.leg-four {
 	background: rgba(0, 0, 0, 0.5);
 	position: relative;
 	width: 20px;
 	height: 3px;
 }
 
-.uno>.uno,
-.dos>.dos,
-.tres>.tres,
-.cuatro>.cuatro {
+.leg-one>.leg-one,
+.leg-two>.leg-two,
+.leg-three>.leg-three,
+.leg-four>.leg-four {
 	transform-origin: 20px top;
 	transform: rotate(-80deg) translateX(20px);
-	animation: seg 2.5s ease infinite;
+	animation: legs 2.5s ease infinite;
 }
 
-.uno>.uno>.uno,
-.dos>.dos>.dos,
-.tres>.tres>.tres,
-.cuatro>.cuatro>.cuatro {
+.leg-one>.leg-one>.leg-one,
+.leg-two>.leg-two>.leg-two,
+.leg-three>.leg-three>.leg-three,
+.leg-four>.leg-four>.leg-four {
 	transform-origin: 20px top;
 	transform: rotate(10deg) translateX(10px);
-	animation: seg 1.5s ease infinite;
+	animation: legs 1.5s ease infinite;
 }
 
-.right-spy>.dos>.dos {
+.right-spy>.leg-two>.leg-two {
 	animation-delay: 200ms;
 }
 
-.dos>.dos {
+.leg-two>.leg-two {
 	animation-delay: 400ms;
 }
 
-.dos>.dos>.dos {
+.leg-two>.leg-two>.leg-two {
 	animation-delay: 200ms;
 }
 
-.right-spy>.tres>.tres {
+.right-spy>.leg-three>.leg-three {
 	animation-delay: 400ms;
 }
 
-.tres>.tres {
+.leg-three>.leg-three {
 	animation-delay: 600ms;
 }
 
-.tres>.tres>.tres {
+.leg-three>.leg-three>.leg-three {
 	animation-delay: 300ms;
 }
 
-.right-spy>.cuatro>.cuatro {
+.right-spy>.leg-four>.leg-four {
 	animation-delay: 100ms;
 }
 
-.cuatro>.cuatro {
+.leg-four>.leg-four {
 	animation-delay: 800ms;
 }
 
-.cuatro>.cuatro>.cuatro {
+.leg-four>.leg-four>.leg-four {
 	animation-delay: 400ms;
 }
 
-@keyframes seg {
+@keyframes legs {
 	50% {
 		transform: rotate(55deg) translateX(20px);
 	}
 }
 
-@keyframes inicio {
+@keyframes dropDown {
 	30% {
 		top: 30%;
 	}

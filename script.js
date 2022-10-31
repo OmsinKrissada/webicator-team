@@ -7,6 +7,9 @@ fetch('https://gamertocoder.garena.co.th/api/minigames')
 	});
 
 
+/**
+ * Immediately triggered after successful garena API fetch
+ */
 async function onFetched() {
 
 	// construct panel list
@@ -30,7 +33,7 @@ async function onFetched() {
 		titleElement.classList.add(`game-${game.no}`, 'up');
 		titleHolder.appendChild(titleElement);
 
-		// construct description
+		// construct genre + description
 
 		const descElement = document.createElement('p');
 		descElement.innerHTML += `<span>${game.genre.join(' / ')}</span>\n${game.description}`;
@@ -113,6 +116,7 @@ function setCoverDisplay(id) {
  * @param {number} id game id
  */
 function jumpTo(id) {
+	document.getElementById('overview').setAttribute('style', 'display: none;');
 	setCoverDisplay(id);
 	// alert(id);
 }
