@@ -20,6 +20,7 @@ async function onFetched() {
 
 	const titleHolder = document.getElementById('title-holder');
 	const descriptionHolder = document.getElementById('description-holder');
+	const iconHolder = document.getElementById('icon-holder');
 	for (const game of games) {
 
 		// construct title
@@ -35,6 +36,13 @@ async function onFetched() {
 		descElement.innerText = game.description.toUpperCase();
 		descElement.classList.add(`game-${game.no}`, 'right');
 		descriptionHolder.appendChild(descElement);
+
+		// construct icon
+
+		const iconElement = document.createElement('img');
+		iconElement.src = game.icon;
+		iconElement.classList.add(`game-${game.no}`, 'left');
+		iconHolder.appendChild(iconElement);
 	}
 }
 
