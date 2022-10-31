@@ -63,10 +63,8 @@ section {
 	z-index: 1;
 	bottom: 0;
 	left: 0;
-
 	height: 4em;
 	pointer-events: none;
-
 	background-image: linear-gradient(to bottom,
 			rgba(255, 255, 255, 0),
 			rgba(255, 255, 255, 1) 90%);
@@ -171,6 +169,7 @@ section {
 	font-size: xx-large;
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
 	color: white;
+	border-radius: 30px;
 }
 
 #description-holder {
@@ -178,6 +177,7 @@ section {
 
 	min-width: 500px;
 	min-height: 326px;
+	margin-right: 50px;
 	/* min-height: 500px; */
 }
 
@@ -186,7 +186,7 @@ section {
 	/* max-width: 50vmin; */
 	width: 100%;
 
-	font-size: large;
+	font-size: 21px;
 	/* text-align: justify; */
 	color: white;
 }
@@ -200,7 +200,13 @@ section {
 
 #icon-holder img {
 	position: absolute;
+	border-style: solid;
+	border-width: 4px;
+	border-color: orange;
+	border-radius: 10px;
+	box-shadow: 20px 20px 20px;
 }
+
 
 .wallpaper {
 	position: absolute;
