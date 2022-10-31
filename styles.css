@@ -3,8 +3,6 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
-@ww: 20px;
-@hh: 3px;
 
 * {
 	margin: 0;
@@ -191,6 +189,9 @@ section {
 	font-size: 21px;
 	/* text-align: justify; */
 	color: white;
+
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+
 }
 
 #icon-holder {
@@ -202,11 +203,9 @@ section {
 
 #icon-holder img {
 	position: absolute;
-	border-style: solid;
-	border-width: 4px;
-	border-color: orange;
+	border: 4px solid rgb(184, 119, 0);
 	border-radius: 10px;
-	box-shadow: 20px 20px 20px;
+	box-shadow: 0px 0px 20px #00000088;
 }
 
 
@@ -427,130 +426,4 @@ section {
 	background-color: lightsalmon;
 	padding: 20px;
 	border-radius: 20px;
-}
-
-/* By Toffy */
-
-
-html,
-body {
-  height: 100%;
-  overflow: hidden; 
-}
-
-.container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -20px;
-  animation: inicio 3s ease-in-out forwards;
-}
-
-.container::after {
-  background: rgba(0,0,0,0.5);
-  content:"";
-  position: absolute;
-  top: -1000px;
-  left: 50%;
-  margin-left: 9px;
-  width: 1px;
-  height: 1000px;
-}
-
-.container::before {
-  background: rgba(0,0,0,1);
-  border-radius: 100%;
-  color: #fff;
-  font-size: 1.3em;
-  content:"......";
-  position: absolute;
-  margin-top: -5px;
-  margin-left: -2px;
-  width: 25px;
-  height: 8px;
-}
-
-.left-spy {
-  position: absolute;
-}
-
-.right-spy {
-  position: absolute;
-  transform: rotateY(180deg);
-}
-
-.uno,
-.dos,
-.tres,
-.cuatro {
-  background: rgba(0,0,0,0.5);
-  position: relative;
-  width: 20px;
-  height: 3px;
-}
-
-.uno > .uno,
-.dos > .dos,
-.tres > .tres,
-.cuatro > .cuatro {
-  transform-origin: 20px top;
-  transform: rotate(-80deg) translateX(20px);
-  animation: seg 2.5s ease infinite;
-}
-
-.uno > .uno > .uno,
-.dos > .dos > .dos,
-.tres > .tres > .tres,
-.cuatro > .cuatro > .cuatro {
-  transform-origin: 20px top;
-  transform: rotate(10deg) translateX(10px);
-  animation: seg 1.5s ease infinite;
-}
-
-.right-spy > .dos > .dos {
-  animation-delay: 200ms;
-}
-
-.dos > .dos {
-  animation-delay: 400ms;
-}
-
-.dos > .dos > .dos {
-  animation-delay: 200ms;
-}
-
-.right-spy >.tres > .tres {
-  animation-delay: 400ms;
-}
-
-.tres > .tres {
-  animation-delay: 600ms;
-}
-
-.tres > .tres > .tres {
-  animation-delay: 300ms;
-}
-
-.right-spy > .cuatro > .cuatro {
-  animation-delay: 100ms;
-}
-
-.cuatro > .cuatro {
-  animation-delay: 800ms;
-}
-
-.cuatro > .cuatro > .cuatro {
-  animation-delay: 400ms;
-}
-
-@keyframes seg {
-  50% {
-    transform: rotate(55deg) translateX(20px);
-  }
-}
-
-@keyframes inicio {
-  100% {
-    top: 50%;
-  }
 }
